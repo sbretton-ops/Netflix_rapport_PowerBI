@@ -3,6 +3,35 @@
 
 ---
 
+## Sommaire
+- [Netflix Data Analysis – Dashboard](#netflix-data-analysis--dashboard)
+    - [Projet Data Analysis – Data Visualisation \& Business Intelligence](#projet-data-analysis--data-visualisation--business-intelligence)
+  - [Sommaire](#sommaire)
+  - [Contexte](#contexte)
+  - [Problématique](#problématique)
+  - [Objectifs du projet](#objectifs-du-projet)
+  - [Sources des données](#sources-des-données)
+    - [Fichiers sources](#fichiers-sources)
+  - [Technologies utilisées](#technologies-utilisées)
+    - [Data Visualisation / BI](#data-visualisation--bi)
+    - [Langage](#langage)
+    - [Python](#python)
+    - [Outils](#outils)
+    - [Focus API](#focus-api)
+  - [Architecture du projet](#architecture-du-projet)
+  - [Description du dashboard Power BI](#description-du-dashboard-power-bi)
+  - [Architecture des données](#architecture-des-données)
+    - [Schéma Relationnel](#schéma-relationnel)
+  - [Aperçu du Projet](#aperçu-du-projet)
+    - [Vue Principale](#vue-principale)
+    - [Analyses Détaillées](#analyses-détaillées)
+  - [Résultats clés](#résultats-clés)
+  - [Limites du projet](#limites-du-projet)
+  - [Perspectives d’évolution](#perspectives-dévolution)
+  - [Licence](#licence)
+
+---
+
 ## Contexte
 
 
@@ -23,7 +52,7 @@ Le projet combine **visualisation avancée sous Power BI** et **enrichissement o
 
 ## Objectifs du projet
 
-Construire un **dashboard Power BI clair, interactif et exploitable**, structurée autour de plusieurs axes :
+Construire un **rapport Power BI clair, interactif et exploitable**, structuré autour de plusieurs axes :
 
 - Analyse globale du catalogue - Chiffres clés (nombre de titres, Movies vs TV Shows)
 - Répartition des contenus par genres
@@ -34,7 +63,7 @@ Construire un **dashboard Power BI clair, interactif et exploitable**, structur�
 * Optionnel : 
 - Analyse du catalogue à travers les notes IMDb
 
-L’objectif final est de produire un **dashboard Power BI multi-pages**, permettant une exploration fluide et interactive des données.
+L’objectif final est de produire un **rapport Power BI multi-pages**, permettant une exploration fluide et interactive des données.
 
 ---
 
@@ -47,9 +76,6 @@ Les données utilisées dans ce projet proviennent de différentes sources et fo
 - **netflix_titles.csv**  
   Fichier principal contenant l’ensemble des informations sur les contenus Netflix  
   (titres, type de contenu, catégories, pays, dates, durées, classifications d’âge, etc.).
-
-- **countries_lakes.json**  
-  Récupération d'un fichier Shapefiles sur le site naturalearthdata.com pour obtenir une map monde avec les frontières des différents pays. Import dans l'outil open source mapshaper.org et export du fichier json pour la future carte de forme dans Power BI
   
 - **imdb_scores_export.csv**
   Fichier de sortie généré par le script Python.
@@ -99,12 +125,9 @@ NETFLIX/
 |   |-- API.ipynb
 |   |-- .env
 |
-|-- ISO_map_boundaries/
-|   |-- 50m_admin_0_countries_lakes.json
-|
 |-- NETFLIX_Project/
 |   |-- In_Netflix_Data_Analyst_Shoes.pdf
-|   |-- Dashboard_model_NETFLIX.pdf
+|   |-- Rapport_NETFLIX_PowerBI.pdf
 |
 |-- Visualisation/
 |   |-- Projet_NETFLIX_PowerBI.pbix
@@ -117,10 +140,10 @@ NETFLIX/
 
 ## Architecture des données 
 
-Le projet repose sur une base de données structurée selon un **modèle en étoile**
+Le projet repose sur une base de données structurée selon un **modèle en flocon**. Des tables de pont permettent de normaliser les relations entre les différentes tables.
 
 ### Schéma Relationnel
-![Modèle en Étoile](netflix.png/Model.png.png)
+![Modèle en flocon](netflix.png\Model.png)
 
 
 ## Aperçu du Projet
@@ -128,7 +151,7 @@ Le projet repose sur une base de données structurée selon un **modèle en éto
 Voici les différentes vues du tableau de bord Netflix intégrant l'analyse des données mondiales.
 
 ### Vue Principale
-![Dashboard Principal](netflix.png/main.png.png)
+![Dashboard Principal](netflix.png\Main.png)
 
 Cette page propose une vision globale du catalogue NETFLIX à travers des chiffres clés. 
 
@@ -142,7 +165,7 @@ Cette page propose une vision globale du catalogue NETFLIX à travers des chiffr
 ### Analyses Détaillées
 | Contenu par Type | Répartition par Pays |
 | :---: | :---: |
-| ![Content](netflix.png/content.png.png) | ![Countries](netflix.png/countries.png.png) |
+| ![Content](netflix.png\Content.png) | ![Countries](netflix.png\Countries.png) |
 
 *Content*
 - Ajout du contenu et saisonalité (création d une hiérarchie)
@@ -157,7 +180,7 @@ Cette page propose une vision globale du catalogue NETFLIX à travers des chiffr
 
 | Évolution des Durées | Scores IMDB |
 | :---: | :---: |
-| ![Durations](netflix.png/durations.png.png) | ![IMDB](netflix.png/IMDB.png.png) |
+| ![Durations](netflix.png\Durations.png) | ![IMDB](netflix.png\IMDb.png) |
 
 *Durations*
 - Nombre d'heures et de saisons visionnables sur NETFLIX
