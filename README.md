@@ -143,7 +143,7 @@ NETFLIX/
 Le projet repose sur une base de données structurée selon un **modèle en flocon**. Des tables de pont permettent de normaliser les relations entre les différentes tables.
 
 ### Schéma Relationnel
-![Modèle en flocon](netflix.png\Model.png)
+![Modèle en flocon](netflix.png/Model.png)
 
 
 ## Aperçu du Projet
@@ -151,7 +151,7 @@ Le projet repose sur une base de données structurée selon un **modèle en floc
 Voici les différentes vues du tableau de bord Netflix intégrant l'analyse des données mondiales.
 
 ### Vue Principale
-![Dashboard Principal](netflix.png\Main.png)
+![Dashboard Principal](netflix.png/Main.png)
 
 Cette page propose une vision globale du catalogue NETFLIX à travers des chiffres clés. 
 
@@ -165,7 +165,7 @@ Cette page propose une vision globale du catalogue NETFLIX à travers des chiffr
 ### Analyses Détaillées
 | Contenu par Type | Répartition par Pays |
 | :---: | :---: |
-| ![Content](netflix.png\Content.png) | ![Countries](netflix.png\Countries.png) |
+| ![Content](netflix.png/Content.png) | ![Countries](netflix.png/Countries.png) |
 
 *Content*
 - Ajout du contenu et saisonalité (création d une hiérarchie)
@@ -180,7 +180,7 @@ Cette page propose une vision globale du catalogue NETFLIX à travers des chiffr
 
 | Évolution des Durées | Scores IMDB |
 | :---: | :---: |
-| ![Durations](netflix.png\Durations.png) | ![IMDB](netflix.png\IMDb.png) |
+| ![Durations](netflix.png/Durations.png) | ![IMDB](netflix.png/IMDb.png) |
 
 *Durations*
 - Nombre d'heures et de saisons visionnables sur NETFLIX
